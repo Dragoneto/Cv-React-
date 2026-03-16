@@ -7,6 +7,7 @@ import Perfil from './Perfil';
 import Config from './Config';
 import Cadastro from './Cadastro';
 import MensagemSalva from './MensagemSalva';
+import Filmes from './Filmes';
 
 const Stack = createStackNavigator();
 
@@ -14,6 +15,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Filmes" component={Filmes} options={{ title: 'Filmes Populares' }} />
         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
         <Stack.Screen name="Contato" component={Contato} options={{ title: 'Fale Conosco' }} />
         <Stack.Screen name="Perfil" component={Perfil} options={{ title: 'Meu Perfil' }} />
