@@ -11,17 +11,24 @@ import Filmes from './Filmes';
 
 const Stack = createStackNavigator();
 
+const screenOptions = {
+  headerStyle: { backgroundColor: '#0F0F17', borderBottomWidth: 0, elevation: 0, shadowOpacity: 0 },
+  headerTintColor: '#F0F0F5',
+  headerTitleStyle: { fontWeight: 'bold', fontSize: 17 },
+  cardStyle: { backgroundColor: '#0F0F17' },
+};
+
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Filmes" component={Filmes} options={{ title: 'Filmes Populares' }} />
-        <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
-        <Stack.Screen name="Contato" component={Contato} options={{ title: 'Fale Conosco' }} />
-        <Stack.Screen name="Perfil" component={Perfil} options={{ title: 'Meu Perfil' }} />
-        <Stack.Screen name="Config" component={Config} options={{ title: 'Configurações' }} />
-        <Stack.Screen name="Cadastro" component={Cadastro} options={{ title: 'Criar Conta' }} />
-        <Stack.Screen name="MensagemSalva" component={MensagemSalva} options={{ title: 'Mensagem Recuperada' }} />
+      <Stack.Navigator initialRouteName="Home" screenOptions={screenOptions}>
+        <Stack.Screen name="Home"          component={Home}          options={{ headerShown: false }} />
+        <Stack.Screen name="Filmes"        component={Filmes}        options={{ headerShown: false }} />
+        <Stack.Screen name="Contato"       component={Contato}       options={{ headerShown: false }} />
+        <Stack.Screen name="Perfil"        component={Perfil}        options={{ headerShown: false }} />
+        <Stack.Screen name="Config"        component={Config}        options={{ headerShown: false }} />
+        <Stack.Screen name="Cadastro"      component={Cadastro}      options={{ headerShown: false }} />
+        <Stack.Screen name="MensagemSalva" component={MensagemSalva} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -24,6 +24,10 @@ function Home({ navigation }) {
       <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Cadastro')}>
         <Text style={styles.textoBotao}>CADASTRAR</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Filmes')}>
+        <Text style={styles.textoBotao}>FILMES POPULARES</Text>
+      </TouchableOpacity>
     
 
       <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('MensagemSalva')}>
